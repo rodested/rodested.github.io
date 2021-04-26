@@ -1,0 +1,51 @@
+#+TITLE: Rodested's devops public site
+#+AUTHOR: Eduardo R.E.
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+
+* About Spacemacs
+Just first version
+
+** Installing Spacemacs 27.1 in Linux (Ubuntu 20.04 LTS)
+   
+#+BEGIN_SRC shell
+  # (Recommended) uninstall distribution Emacs
+  sudo apt-get remove emacs
+
+  # install emacs from PPA repository
+  sudo add-apt-repository ppa:kelleyk/emacs
+  sudo apt-get update
+  sudo apt-get install emacs27
+
+  # install spacemacs
+  git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+  # update elpa keys
+  mkdir -p ~/.emacs.d/elpa/gnupg
+  echo "keyserver hkp://keys.gnupg.net" > ~/.emacs.d/elpa/gnupg/gpg.conf
+  gpg --homedir ~/.emacs.d/elpa/gnupg --receive-keys 066DAFCB81E42C40
+
+  # install Source Code Pro
+  mkdir -p ~/.fonts
+  cd ~/.fonts
+  wget https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip
+  unzip 1.050R-it.zip
+  rm -rf 1.050R-it.zip
+  cd
+#+END_SRC
+
+  Now, start emacs and answer to the starting questions and you're ready.
+
+** Next Actions
+   
+*** TODO Suggestions about different configuration options
+    * [ ] I'll try to provide some example too
+
+
+** Notes
+   This file has been generated from org mode in Spacemacs.
+   Instructions to build your own site are [[https://github.com/fniessen/org-html-themes][here]].
+   
+   To include a custom CSS in the exported HTML (this) file, include the next option in the org file:
+   ~#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles.css"~ and provide your own ~styles.css~ file.
+   
