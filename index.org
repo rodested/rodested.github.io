@@ -49,3 +49,8 @@ Just first version
    To include a custom CSS in the exported HTML (this) file, include the next option in the org file:
    ~#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles.css"~ and provide your own ~styles.css~ file.
    
+** References
+   * [[https://www.gitmemory.com/rodested/Open][GitHub Memory]]
+   * [[https://githubmemory.com/@rodested][GitHub Profile]]
+   * [[https://github.com/rodested/][GitHub Projects]]
+
